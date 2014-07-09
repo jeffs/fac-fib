@@ -4,7 +4,9 @@
   * @note This implementation uses output parameters to allow reuse of
   * previously allocated memory.  The technique also supports the potential
   * future use of custom allocators, since the caller of each function
-  * allocates and configures the result object.
+  * allocates and configures the result object.  Moreover, the use of in-place
+  * operators for assignments avoids the creation of unnecessary temporary
+  * objects.
   *
   * @todo Memoize functions.  They currently require O(n) time per call.
   */
